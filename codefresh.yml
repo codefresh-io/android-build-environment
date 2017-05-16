@@ -1,23 +1,6 @@
 version: '1.0'
 
-steps:
-
-  build andoriod build pack:
-    type: build
-    title: Step Title
-    description: Free text description
-    dockerfile: Dockerfile
-    image_name: myaccount/android
-    tag: develop
-    build_arguments:
-      - key=value
-    fail_fast: false
-    metadata:
-      set:
-        - qa: pending
-
   run ci:
-    title: Step Title
-    image: myaccount/android:develop
+    image: jacekmarchwicki/android
     command:
-       - echo 'put here your compilation process'
+       - echo 'put here your mobile compilation process'
